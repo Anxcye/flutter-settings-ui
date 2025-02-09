@@ -27,20 +27,20 @@ class SettingsSection extends AbstractSettingsSection {
       case DevicePlatform.android:
       case DevicePlatform.fuchsia:
       case DevicePlatform.linux:
+      case DevicePlatform.windows:
+      case DevicePlatform.iOS:
+      case DevicePlatform.macOS:
+      case DevicePlatform.web:
         return AndroidSettingsSection(
           title: title,
           tiles: tiles,
           margin: margin,
         );
-      case DevicePlatform.iOS:
-      case DevicePlatform.macOS:
-      case DevicePlatform.windows:
         return IOSSettingsSection(
           title: title,
           tiles: tiles,
           margin: margin,
         );
-      case DevicePlatform.web:
         return WebSettingsSection(
           title: title,
           tiles: tiles,
